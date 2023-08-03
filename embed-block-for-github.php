@@ -57,7 +57,7 @@ class embed_block_for_github {
 			'render_callback' => array( $this, 'ebg_embed_repository' ),
 			'attributes'      => array(
 				'github_url' => array( 'type' => 'string' ),
-				'darck_mode' => array( 'type' => 'boolean' ),
+				'dark_mode' => array( 'type' => 'boolean' ),
 			),
 		) );
 	}
@@ -102,7 +102,7 @@ class embed_block_for_github {
 
 	private function check_message($message) {
 		if ($message == "Not Found") {
-			return '<p>' . esc_html__( 'Error: Reposity not found. Please check your URL.', 'embed-block-for-github' ) . '</p>';
+			return '<p>' . esc_html__( 'Error: Repository not found. Please check your URL.', 'embed-block-for-github' ) . '</p>';
 		} else {
 			return '<p>' . esc_html( sprintf( 'Error: %s', $message ) , 'embed-block-for-github' ) . '</p>';
 		}
@@ -110,10 +110,10 @@ class embed_block_for_github {
 
 	public function ebg_embed_repository( $attributes ) {
 		$github_url = trim( $attributes['github_url'] );
-		$darck_mode = (in_array("darck_mode", $attributes) ? $attributes['darck_mode'] : false);
+		$dark_mode = (in_array("dark_mode", $attributes) ? $attributes['dark_mode'] : false);
 		
 		$a_remplace = [];
-		$a_remplace['%%_WRAPPER_DARK_MODE_%%'] = "ebg-br-wrapper-dark-mode-" . ($darck_mode ? "on" : "off");
+		$a_remplace['%%_WRAPPER_DARK_MODE_%%'] = "ebg-br-wrapper-dark-mode-" . ($dark_mode ? "on" : "off");
 		
 		if ( '' === trim( $github_url ) ) {
 			$content = '<p>' . esc_html__( 'Use the Sidebar to add the URL of the GitHub Repository to embed.', 'embed-block-for-github' ) . '</p>';
@@ -133,9 +133,9 @@ class embed_block_for_github {
 							$a_remplace['%%_DATA_AVATAR_URL_%%'] = $data->owner->avatar_url;
 							$a_remplace['%%_DATA_REPO_URL_%%'] = $data->html_url;
 							$a_remplace['%%_DATA_REPO_NAME_%%'] = $data->name;
-							$a_remplace['%%_DATA_AUTOR_URL_%%'] = $data->owner->html_url;
-							$a_remplace['%%_DATA_AUTOR_NAME_%%'] = $data->owner->login;
-							$a_remplace['%%_DATA_DESCIPTION_%%'] = $data->description;
+							$a_remplace['%%_DATA_AUTHOR_URL_%%'] = $data->owner->html_url;
+							$a_remplace['%%_DATA_AUTHOR_NAME_%%'] = $data->owner->login;
+							$a_remplace['%%_DATA_DESCRIPTION_%%'] = $data->description;
 						}
 						unset($data);
 					} 
@@ -157,9 +157,9 @@ class embed_block_for_github {
 								$a_remplace['%%_DATA_AVATAR_URL_%%'] = $data->owner->avatar_url;
 								$a_remplace['%%_DATA_REPO_URL_%%'] = $data->html_url;
 								$a_remplace['%%_DATA_REPO_NAME_%%'] = $data->name;
-								$a_remplace['%%_DATA_AUTOR_URL_%%'] = $data->owner->html_url;
-								$a_remplace['%%_DATA_AUTOR_NAME_%%'] = $data->owner->login;
-								$a_remplace['%%_DATA_DESCIPTION_%%'] = $data->description;
+								$a_remplace['%%_DATA_AUTHOR_URL_%%'] = $data->owner->html_url;
+								$a_remplace['%%_DATA_AUTHOR_NAME_%%'] = $data->owner->login;
+								$a_remplace['%%_DATA_DESCRIPTION_%%'] = $data->description;
 							} 
 						} else {
 							$content = '<p>' . esc_html__( 'No information available. Please check your URL.', 'embed-block-for-github' ) . '</p>';

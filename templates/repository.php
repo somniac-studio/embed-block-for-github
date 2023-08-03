@@ -15,13 +15,13 @@
 				</a>
 			</strong>
 			<em>
-				<?php echo esc_html__( 'by', 'embed-block-for-github' ); ?><a target="_blank" rel="noopener noreferrer" href="%%_DATA_AUTOR_URL_%%">
-					%%_DATA_AUTOR_NAME_%%
+				<?php echo esc_html__( 'by', 'embed-block-for-github' ); ?><a target="_blank" rel="noopener noreferrer" href="%%_DATA_AUTHOR_URL_%%">
+					%%_DATA_AUTHOR_NAME_%%
 					<span class="screen-reader-text">(<?php echo esc_html__( 'this link opens in a new window', 'embed-block-for-github' ); ?>)</span>
 				</a>
 			</em>
 		</p>
-		<p class="ebg-br-description">%%_DATA_DESCIPTION_%%</p>
+		<p class="ebg-br-description">%%_DATA_DESCRIPTION_%%</p>
 		<p class="ebg-br-footer">
 			<span class="ebg-br-subscribers">
 				<span class="ebg-br-background-image"></span>

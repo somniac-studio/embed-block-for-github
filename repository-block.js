@@ -32,7 +32,7 @@
 		github_url: {
 	    	type: 'string',
 		},
-		darck_mode: {
+		dark_mode: {
 			type: 'boolean',
 			default: false,
 		},
@@ -41,7 +41,7 @@
 	edit: function ( props ) {
 		var attributes = props.attributes
 		var github_url = props.attributes.github_url
-		var darck_mode = props.attributes.darck_mode
+		var dark_mode = props.attributes.dark_mode
 
 		return [
 			el( 'div', { className: 'components-block-description' },
@@ -72,9 +72,9 @@
 					el (
 						ToggleControl, {
 							label: i18n.__( 'Activate Dark Mode' ),
-							checked: darck_mode,
+							checked: dark_mode,
 							onChange: function ( new_mode ) {
-								props.setAttributes( { darck_mode: new_mode } )
+								props.setAttributes( { dark_mode: new_mode } )
 							}
 						}
 					),

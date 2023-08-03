@@ -3,7 +3,7 @@ Contributors: audrasjb, whodunitagency, pedromendonca, vsc55
 Donate link: https://www.paypal.me/audrasjb
 Tags: GitHub, embed, block, Gutenberg, bloc, gist, git, repository, card
 Requires at least: 5.2
-Tested up to: 5.4
+Tested up to: 6.0
 Stable tag: 0.3
 Requires PHP: 5.6
 License: GPLv2
@@ -38,7 +38,7 @@ Special thanks:
 
 = 0.3 =
 * Code refresh and dark mode support. Props @vsc55: https://github.com/audrasjb/embed-block-for-github/pull/2
-* Added @vsc55 as plugin contributor for his multiple contributions ♥️
+* Added @pedromendonca and @vsc55 as plugin contributor for their multiple contributions ♥️
 
 = 0.2 =
 * Localization/internationalization fixes. Props @pedro-mendoza: https://github.com/audrasjb/embed-block-for-github/pull/1
