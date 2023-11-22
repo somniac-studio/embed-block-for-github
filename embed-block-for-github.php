@@ -1,5 +1,6 @@
 <?php
-/**
+/*
+ *
  * @link              https://jeanbaptisteaudras.com
  * @since             0.1
  * @package           Embed Block for GitHub
@@ -21,11 +22,6 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 class embed_block_for_github {
-
-	private function msgdebug ($msg) {
-		//$this->msgdebug("PAHT:".plugin_dir_path( __FILE__ ));
-		error_log("DEBUG: ".$msg, 0);
-	}
 
 	public function __construct() {
 		add_action( 'init', array( $this, 'init_wp_register' ) );
@@ -50,7 +46,7 @@ class embed_block_for_github {
 			array(),
 			$this->plugin_file_ver('repository-block.css')
 		);
-		register_block_type( 'embed-block-for-github/repository', array(
+		registerBlockType( 'embed-block-for-github/repository', array(
 			'editor_script'   => 'ebg-repository-editor',
 			'editor_style'    => 'ebg-repository-editor',
 			'style'           => 'ebg-repository',

@@ -5,7 +5,7 @@
 	var BlockControls = wp.editor.BlockControls
 	var AlignmentToolbar = wp.editor.AlignmentToolbar
 	var MediaUpload = wp.editor.MediaUpload
-	var InspectorControls = wp.editor.InspectorControls
+	var InspectorControls = wp.blockEditor.InspectorControls
 	var TextControl = components.TextControl
 	var ToggleControl = wp.components.ToggleControl
 	var ServerSideRender = components.ServerSideRender
